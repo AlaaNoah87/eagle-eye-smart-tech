@@ -1,4 +1,4 @@
-/*
+e/*
  * Stylesheet for Eagle Eye Security & Network Solutions
  *
  * This file defines the colour palette, typography, layout, and reusable
@@ -329,5 +329,42 @@ footer a {
   color: var(--accent-color);
 }
 footer a:hover {
-  text-decoration: underline;
+ 
+  /* --- Mobile baseline --- */
+html, body { width: 100%; overflow-x: hidden; }
+img, video, canvas, iframe, table { max-width: 100%; height: auto; }
+.container, .wrap, .site-content, main, section {
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* Simple responsive grids */
+.row { display: grid; grid-template-columns: 1fr; gap: 16px; }
+@media (min-width: 768px) { .row--2 { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1024px){ .row--3 { grid-template-columns: 1fr 1fr 1fr; } }
+
+/* Scalable type */
+:root{
+  --fs-h1: clamp(28px, 4vw, 44px);
+  --fs-h2: clamp(22px, 3.2vw, 32px);
+  --fs-body: clamp(16px, 2.5vw, 18px);
+}
+h1{ font-size: var(--fs-h1) }
+h2{ font-size: var(--fs-h2) }
+body{ font-size: var(--fs-body); line-height: 1.6 }
+
+/* Nav wrap on small screens */
+nav ul{ display:flex; flex-wrap:wrap; gap:12px; }
+
+/* Tables scroll on mobile */
+table{ display:block; width:100%; overflow-x:auto; }
+
+/* Bigger tap targets */
+@media (max-width: 768px) {
+  a.button, button, [role="button"] { min-height: 44px; min-width: 44px; }
+}
+text-decoration: underline;
 }
