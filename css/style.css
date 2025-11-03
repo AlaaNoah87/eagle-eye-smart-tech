@@ -31,7 +31,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+body var(--text-light)
   font-family: 'Montserrat', sans-serif;
   background-color: var(--primary-color);
   color: var(--text-light);
@@ -136,7 +136,7 @@ nav ul li a:hover {
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  color: #dbe5fa;
+  color: #var(--text-light);
 }
 
 .btn {
