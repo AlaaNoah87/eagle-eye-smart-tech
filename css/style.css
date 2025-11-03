@@ -16,12 +16,10 @@ e/*
   --secondary-color: #132b50; /* slightly lighter for cards */
   --accent-color: #d4af37; /* gold accent for buttons and highlights */
   --light-bg: #f9fafb; /* off‑white background for alternating sections */
-  --text-light: #f5f5f5; /* light text on dark backgrounds */
+ --text-light: #ffffff; /* light text on dark backgrounds */
   --text-dark: #152238; /* dark text on light backgrounds */
 }
-
-/* Global reset and base styles */
-* {
+{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -368,3 +366,10 @@ table{ display:block; width:100%; overflow-x:auto; }
 }
 text-decoration: underline;
 }
+/* Improve hero text contrast */
+.hero h1,
+.hero p,
+.hero a {
+  color: var(--text-light);
+}
+
